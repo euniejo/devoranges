@@ -1,0 +1,65 @@
+/*  
+* PROG1935-23W-Sec5-Programming Dynamic Websites
+* Purpose  : table-layout CSS for Assignment4
+* Revision History : version 1.0
+* Written by       : Eunheui Jo
+* Date             : Apr. 13. 2023 
+*/
+
+body{
+    
+    background-color:#3CACAC;
+    font-family: 'Kalam';
+    font-size: 30px;
+    text-align: center;
+}
+
+#display{
+    background-color: floralwhite;
+    display: inline-block;
+    border: 3px solid rgb(6, 23, 115); 
+    width: 50%;
+    font-size: x-large;
+}
+
+table{
+    display: inline-block;
+    table-layout: fixed;
+    width: 90%;
+    border: 3px solid #222F48; 
+    border-collapse:collapse;
+    background-color:floralwhite;
+ 
+}
+
+#receipt td{
+    width: 400px;
+    font-size: medium;
+    font-style:normal;
+    font-size: x-large;
+    text-align: top;
+}
+
+#receipt td:nth-child(1){ 
+    width: 65%;
+    padding-left: 5%;
+    text-align: left;
+}
+
+#receipt td:nth-child(3){ 
+    width: 30%;
+    padding-right: 5%;
+    text-align: end; 
+}
+
+.history{
+    width: 80%;
+}
+
+.history th, td{
+    width: 200px;
+    border-collapse:collapse;
+    font-size: medium;
+    font-style:normal;
+    text-align: center;
+}

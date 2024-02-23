@@ -1,0 +1,68 @@
+/*  
+* PROG1935-23W-Sec5-Programming Dynamic Websites
+* Purpose  : Web Form CSS for Assignment4
+* Revision History : version 1.0
+* Written by       : Eunheui Jo
+* Date             : Apr. 13. 2023 
+*/
+
+body{
+    background-color:floralwhite;
+    font-family: 'Kalam';
+    font-size: 30px;
+    text-align: center;
+}
+
+form fieldset{
+    display: inline-block;
+    text-align: left;
+    width: 65%;
+    box-shadow: 0 0 10px #2c2c2c; 
+    padding: 30px;
+    margin: 50px auto;
+    color: white;
+    background-color: #008080;
+    border-radius: 20px;
+}
+
+#errors{
+    color: rgb(184, 34, 34);
+}
+
+#display{
+    background-color: #3CACAC;
+    display: inline-block;
+    border: 3px solid rgb(6, 23, 115); 
+    width: 50%;
+    font-size: x-large;
+}
+
+input{
+    font-size:x-large;
+    float: right;
+    margin-right: 10%;
+}
+
+select{
+    font-size: x-large;
+    width: 40%;
+}
+
+label{
+    margin-left: 10%;
+}
+
+select{
+    font-size: large;
+    float: right;
+    margin-right: 10%;
+}
+
+input[type="submit"]{
+    width: 80%;
+    font-size:xx-large;
+    margin-bottom: 20px;
+    background-color: rgb(6, 23, 115);
+    font-family: 'Kalam';
+    color: white;
+}

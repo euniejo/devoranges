@@ -1,0 +1,89 @@
+<!-- /*
+* PROG1935-23W-Sec5-Programming Dynamic Websites
+* Purpose  : Assignment4 (HTML2. Receipt -> order data in a tabular format)
+* Revision History : version 1.0
+* Written by       : Eunheui Jo
+* Date             : Apr. 13. 2023 
+*/ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/order.css">
+    <link rel="stylesheet" href="/css/receipt.css">
+    <title>Login</title>
+</head>
+<body>
+    <div id="display">
+        <h1> Frash produce</h1>
+        <h2> Invoice </h2>
+        <table id="receipt">
+            <tr><td id="firstColumn">Name</td><td>:</td><td class="thirdColumn"><%= deal.username %></td></tr>
+            <tr><td>Email</td><td>:</td><td><%= deal.email %></td></tr>
+            <tr><td>Phone</td><td>:</td><td><%= deal.phone %></td></tr>
+            <tr><td>Delivery Address</td><td>:</td><td><%= deal.address %></td> </tr>
+            <tr><td></td><td></td><td><%= deal.city %></td></tr>
+            <tr><td></td><td></td><td><%= deal.province %></td></tr>
+            <tr><td></td><td></td><td><%= deal.postcode %></td></tr>
+            <tr><td> Estimated date of delivery </td><td>:</td><td><%= deal.deliveryDate %></td></tr>
+           
+            <% for(var i=0; i < deal.items.names.length; i++) { %>
+            <tr>
+                <td>Item <%=i%>: <%= deal.items.names[i] %>/ Quantity <%= deal.items.counts[i]%> /Unit price $<%= deal.items.priceapop[i]%> </td>
+                <td>:</td><td>$<%= deal.items.prices[i]%></td>
+            </tr>
+            <% } %>
+            <tr><td>ShippingCharge</td><td>:</td><td>$<%= deal.shippingCharge %></td></tr>
+            <tr><td>Sub Total</td><td>:</td><td>$<%= deal.subTotal %></td></tr>
+            <tr><td>Taxes @ <%= deal.taxes.rate %>%</td><td>:</td><td>$<%= deal.taxes.amount %></td></tr>
+            <tr><td>Total</td><td>:</td><td>$<%= deal.total%></td></tr>
+        </table>
+    </div>
+    <div>
+        <h1>Your order history</h1>
+  
+            <% history.forEach(function(record){
+                %>
+                <table class="history">
+                    <tr>
+                        <th>Delivery Date</th>
+                        <th>Items</th>
+                        <th>Quantity</th>
+                        <th>Price($)</th>
+                        <th>Shipping Charge($)</th>
+                        <th>SubTotal($)</th>
+                        <th>Tax($)/<%= record.taxes.rate%>%</th>
+                        <th>Total($)</th>
+                    </tr>
+                    <% for(var i = 0; i < record.items.names.length; i++) { 
+                        if(i == 0)
+                        { %>
+                            <tr>
+                                <td rowspan="0"><%= record.deliveryDate %></td>
+                                <td><%= record.items.names[i] %></td>
+                                <td><%= record.items.counts[i] %></td>
+                                <td><%= record.items.priceapop[i] %></td>
+                                <td rowspan="0"><%= record.shippingCharge %></td> 
+                                <td rowspan="0"><%= record.subTotal %></td> 
+                                <td rowspan="0"><%= record.taxes.amount %></td> 
+                                <td rowspan="0"><%= record.total %></td> 
+                            </tr>
+                        <% 
+                        }
+                        else
+                        { 
+                        %>
+                        <tr>
+                            <td><%= record.items.names[i] %></td>
+                            <td><%= record.items.counts[i] %></td>
+                            <td><%= record.items.priceapop[i] %></td>
+                        </tr>
+                    <% }} %>
+                </table>
+            <% })
+            %>
+    </div>
+</body>
+</html>

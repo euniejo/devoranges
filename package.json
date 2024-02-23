@@ -1,0 +1,18 @@
+{
+  "name": "inclass5",
+  "version": "1.0.0",
+  "description": "InClass5 : a secret web page that is accessible only after logging in",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eunheui Jo (8820817)",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "express-validator": "^6.15.0",
+    "mongoose": "^6.10.0"
+  }
+}

@@ -1,0 +1,78 @@
+<!-- /*
+* PROG1935-23W-Sec5-Programming Dynamic Websites
+* Purpose  : Assignment4 (HTML1. Web Form)
+* Revision History : version 1.0
+* Written by       : Eunheui Jo
+* Date             : Apr. 13. 2023 
+*/ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/order.css">
+    <title>Order</title>
+</head>
+<body>
+    <div id="display">
+        <h1> Frash produce </h1>
+        <h2> Order fresh fruits and vegetable online </h2>
+        <form method="post" action="/">
+            <fieldset>
+                <legend>Shipping address </legend>
+                <label>Name*: </label>
+                <input type="text" name="name" value="<%name%>"><br><br>
+                <label>Email*:</label>
+                <input type="text" name="email" value="<%email%>"><br><br>
+                <label>Phone*: </label>
+                <input type="text" placeholder="123-123-123" name="phone" value="<%phone%>"><br><br>
+                <label>Address*: </label>
+                <input type="text" name="address" value="<%address%>"><br><br>
+                <label>City*: </label>
+                <input type="text" name="city" value="<%city%>"><br><br>
+                <label>Post Code*: </label>
+                <input type="text" placeholder="X9X X9X" name="postcode" value="<%postcode%>"><br><br>
+                <label>Province*: </label>
+                <select name="province">
+                    <option>AB</option>
+                    <option>BC</option>
+                    <option>MB</option>
+                    <option>NB</option>
+                    <option>NL</option>
+                    <option>NT</option>
+                    <option>NS</option>
+                    <option>NU</option>
+                    <option>ON</option>
+                    <option>QC</option>
+                    <option>SK</option>
+                    <option>YT</option>
+                </select>
+                <div id="errors">
+                    <% if(typeof(errors) != 'undefined'){
+                        for(var error of errors){ %>
+                            <h3><%= error.msg %></h3>
+                    <%  }    
+                    }%>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Items</legend>
+                <label>Orange Bag-$20: </label>
+                <input type="text" name="product1"><br><br>
+                <label>Spinach-$5: </label>
+                <input type="text" name="product2"><br><br>
+                <label>Strawberries-$13: </label>
+                <input type="text" name="product3"><br><br>
+                <label>Delivery Time:</label>
+                <select name="deliverytime">
+                    <option>1 Day</option>
+                    <option>2 Days</option>
+                    <option>3 Days</option>
+                </select> 
+            </fieldset><br><br>
+            <input type="submit" value="Place Order">
+        </form> 
+    </div>
+</body>
+</html>
