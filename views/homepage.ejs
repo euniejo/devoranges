@@ -3,175 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eunie's board</title>
-    <style>
-        body {
-            background-color:white; 
-            color: white;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            font-size: 16px;
-        }
+    <title>DevOranges</title>
+    <link rel="stylesheet" href="/css/homepage.css">
 
-        .header-nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #222F48;
-            text-align: center;
-            padding: 20px;
-            font-size: 24px;
-            height: 100px;
-        }
-
-        nav {
-            background-color: #222F48;
-            display: flex;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
-        nav a {
-            margin: 0 20px;
-            color: white;
-            text-decoration: none;
-            font-size: 20px;
-        }
-        section {
-            padding: 20px;
-            /* width: 50%; */
-            margin: 0 auto;
-        }
-        #introduction {
-            background-color: whitesmoke; /* Changed background color to a dark shade */
-            color: #333;
-            text-align: center;
-            font-size: 24px;
-            height: 130px;
-            margin-bottom: 20px;
-            padding: 20px;
-            border-radius: 10px;
-        }
-        .grid-item {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        .grid-item a {
-            text-align: center;
-            margin: 20px;
-            flex: 0 0 calc(33.33% - 40px);
-            max-width: calc(33.33% - 40px);
-            text-decoration: none;
-            color: black;
-        }
-        .grid-item img {
-            width: 200px;
-            height: auto;
-            cursor: pointer;
-        }
-        form {
-            max-width: 400px;
-            margin: auto;
-        }
-        input[type="text"], textarea, input[type="submit"] {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            font-size: 16px;
-        }
-        .section-title {
-            text-align: center; /* Align the title in the center */
-            font-size: 34px;
-            margin-bottom: 20px;
-        }
-
-        #projects {
-            background-color: white; /* Set background color to white */
-            color: #333; /* Set text color to dark */
-            padding: 20px; /* Add padding for better spacing */
-            margin-bottom: 20px; /* Add margin at the bottom to create space */
-           
-            width: 60%;
-        }
-
-        #projects h2 {
-            text-align: center; /* Align the title in the center */
-        }
-
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr); /* Create a 3x3 grid */
-            grid-gap: 20px; /* Add gap between grid items */
-        }
-
-        .portfolio-item {
-            text-align: center; /* Align the items in the center */
-        }
-/* 
-        .portfolio-item img {
-            width: 100%; /* Ensure images fill their container */
-            max-height: 200px; /* Limit the height of images */
-            
-        } */
-
-        #contact {
-            background-color: white; /* Set background color to white */
-            color: #333; /* Set text color to dark */
-            padding: 20px; /* Add padding for better spacing */
-        }
-
-        #contact label {
-            display: block;
-            margin-bottom: 10px;
-        }
-
-        #contact input[type="text"],
-        #contact input[type="email"],
-        #contact textarea {
-            width: 100%;
-            padding: 5px 0;
-            border: none;
-            border-bottom: 1px solid #333; /* Add line only at the bottom */
-            margin-bottom: 10px;
-            background-color: transparent; /* Set background color to transparent */
-        }
-
-        #contact input[type="submit"] {
-            background-color: #222F48; /* Set button background color */
-            color: white; /* Set button text color */
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-        }
-
-
-        .grid-item span {
-            display: block;
-            margin-top: 10px;
-            color: #333; /* Adjust text color */
-        }
-    </style>
 </head>
 <body>
     <div class="header-nav-container">
         <header>
-            <h1>Eunie's</h1>
+            <h1>DevOranges</h1>
         </header>
         <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Porfolio</a>
             <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
             <a href="#contact">Contact me</a>
         </nav>
     </div>
     <section id="introduction">
-        <h1 >Services</h1>
+        <img id="main-img" src="/img/devornges_icon.jpeg">
         <h4>I can produce these things</h4>
     </section>
     <section id="projects">
-        <!-- <h1 class="section-title">Portfolio</h1> -->
+        <h1 class="section-title">WORK EXPERIENCE</h1>
         <div class="grid-item">
-            <a href="/views/order.ejs"><img src="/img/website_normal.png" alt="Image 1">
+            <a href="/ordermanager"><img src="/img/website_normal.png" alt="Image 1">
                 <span>Web application</span></a>
             <a href="page2.html"><img src="/img/game_software_cassette.png" alt="Image 2">
                 <span>Game</span></a>
@@ -185,9 +40,68 @@
                 <span>-</span></a>
         </div>
     </section>
+    <section id="about">
+        <h1 class="section-title">ABOUT ME</h1>
+        <div>   
+            <h3>Welcome to Devoranges</h3>
+            <p>
+                This homepage serves as a platform where I share my passion for software services
+                and showcase my expertise in various technologies. 
+                Feel free to explore the projects and services I've worked on, 
+                and don't hesitate to reach out if you're interested in collaborating 
+                or discussing software development ideas!
+                Let's innovate and create together! 🚀
+            </p>
+            <h3>About me</h3>
+            <p>
+                👋 Hello there! I'm an aspiring software developer.
+                I'm deeply passionate about software development and 
+                constantly strive to enhance my skills and knowledge in the field. 
+                With experience in Embedded Speech Recognition using C++, 
+                I'm particularly intrigued by object-oriented programming (OOP) 
+                with a strong focus on languages like C#, Java, and various design patterns.
+            </p>
+            <h3>My Interests</h3>
+            <p>
+                Here are some areas I'm enthusiastic about and eager to explore further:
+                <li>Web Development: Proficient in HTML, CSS, JavaScript, and frameworks like Node.js and ASP.NET.</li>
+                <li>Database Management: Skilled in handling databases including MS SQL Server, MySQL, and MS Access.</li>
+                <li>Mobile Applications: Familiar with JavaScript, jQuery Mobile/Bootstrap, and Angular for developing mobile applications.</li>
+            </p>
+        </div>
+    </section>
+
     <section id="contact">
-        <h1 class="section-title">Contact</h1>
+        <h1 class="section-title">CONTACT</h1><br>
+        <div class="contact-links">
+            <div class="contact-item">
+                <a href="https://github.com/euniejo" target="_blank">
+                    <img src="/img/github_icon.png" alt="GitHub" class="contact-img">
+                    <p class="contact-text">GitHub</p>
+                </a>
+            </div>
+            <div class="contact-item">
+                <a href="https://www.linkedin.com/in/euniejo/" target="_blank">
+                    <img src="/img/linkedin_icon.png" alt="LinkedIn" class="contact-img">
+                    <p class="contact-text">LinkedIn</p>
+                </a>
+            </div>
+            <div class="contact-item">
+                <a href="mailto:iameuniejo@gmail.com">
+                    <img src="/img/email_icon.png" alt="Email" class="contact-img">
+                    <p class="contact-text">iameuniejo@gmail.com</p>
+                </a>
+            </div>
+            <div class="contact-item">
+                <a href="https://www.devornges.com" target="_blank">
+                    <img src="/img/devornges_icon.jpeg" alt="Website" class="contact-img">
+                    <p class="contact-text">Website</p>
+                </a>
+            </div>
+        </div>
+        <br>
         <form>
+            <h2>Send e-mail to me</h2>
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
             <label for="email">Email:</label>

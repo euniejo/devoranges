@@ -40,16 +40,11 @@ var OrderSchema = new mongoose.Schema({
 const Admin = mongoose.model('admins', OrderSchema);
 
 // Start Web Form
+
 myApp.get('/', function(req,res){
-    res.render('homepage',{
-        name: req.body.name,
-        address: req.body.address,
-        city: req.body.city,
-        postcode:req.body.postcode,
-        email: req.body.email,
-        phone: req.body.phone,
-        errors:""});
+    res.render('homepage');
 });
+
 
 // Post Web Form
 myApp.post('/',[check('name', '* Please enter your name').not().isEmpty(), 
@@ -83,6 +78,17 @@ myApp.post('/',[check('name', '* Please enter your name').not().isEmpty(),
             }
     }   
 })
+
+myApp.get('/ordermanager', function(req,res){
+    res.render('order',{
+        name: req.body.name,
+        address: req.body.address,
+        city: req.body.city,
+        postcode:req.body.postcode,
+        email: req.body.email,
+        phone: req.body.phone,
+        errors:""});
+});
 
 //Start Receipt Page
 myApp.get('/receipt/:id', function(req,res){

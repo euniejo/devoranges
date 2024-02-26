@@ -1,0 +1,201 @@
+    body {
+        background-color:white; 
+        color: white;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        font-size: 16px;
+    }
+
+    .header-nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #222F48;
+        text-align: center;
+        padding: 20px;
+        font-size: 24px;
+        height: 100px;
+    }
+
+    nav {
+        background-color: #222F48;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    nav a {
+        margin: 0 20px;
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+    }
+    section {
+        padding: 20px;
+        /* width: 50%; */
+        margin: 0 auto;
+    }
+
+    #introduction {
+        background-color: whitesmoke; /* Changed background color to a dark shade */
+        color: #333;
+        text-align: center;
+        font-size: 24px;
+        height: 350px;
+        margin-bottom: 20px;
+        padding: 20px;
+        border-radius: 10px;
+    }
+    .grid-item {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .grid-item a {
+        text-align: center;
+        margin: 20px;
+        flex: 0 0 calc(33.33% - 40px);
+        max-width: calc(33.33% - 40px);
+        text-decoration: none;
+        color: black;
+    }
+    .grid-item img {
+        width: 200px;
+        height: auto;
+        cursor: pointer;
+    }
+    form {
+        max-width: 400px;
+        margin: auto;
+    }
+    input[type="text"], textarea, input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+    .section-title {
+        text-align: center; /* Align the title in the center */
+        font-size: 34px;
+        margin-bottom: 20px;
+    }
+
+    #projects{
+        background-color: white; /* Set background color to white */
+        color: #333; /* Set text color to dark */
+        padding: 20px; /* Add padding for better spacing */
+        margin-bottom: 20px; /* Add margin at the bottom to create space */
+        width: 60%;
+    }
+
+    #projects h2 {
+        text-align: center; /* Align the title in the center */
+    }
+
+    .portfolio-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Create a 3x3 grid */
+        grid-gap: 20px; /* Add gap between grid items */
+    }
+
+    .portfolio-item {
+        text-align: center; /* Align the items in the center */
+    }
+
+    .portfolio-item img {
+        width: 100%; /* Ensure images fill their container */
+        max-height: 200px; /* Limit the height of images */
+        
+    } 
+
+    #about{
+        background-color: whitesmoke; 
+        padding: 20px;
+        margin-bottom: 20px;
+        color: #333;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    #about h2 {
+        text-align: center; 
+    }
+
+    #about div {
+        /* display: flex;
+        justify-content:baseline; */
+        margin: 0 auto;
+        width: 60%;
+        text-align: left;
+    }
+
+    #contact {
+        background-color: white; 
+        color: #333; 
+        padding: 20px; 
+        
+    }
+
+    #contact label {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    #contact input[type="text"],
+    #contact input[type="email"],
+    #contact textarea {
+        width: 100%;
+        padding: 5px 0;
+        border: none;
+        border-bottom: 1px solid #333; /* Add line only at the bottom */
+        margin-bottom: 10px;
+        background-color: transparent; /* Set background color to transparent */
+    }
+
+    #contact input[type="submit"] {
+        background-color: #222F48; /* Set button background color */
+        color: white; /* Set button text color */
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+
+
+    .grid-item span {
+        display: block;
+        margin-top: 10px;
+        color: #333; /* Adjust text color */
+    }
+       /* Add rounded corners */
+       .rounded-image {
+        border-radius: 50%; /* Makes the image round */
+        overflow: hidden; /* Ensures the image doesn't overflow its container */
+    }
+
+    /* Add blur effect */
+    #main-img {
+        border-radius: 20%; /* Makes the image round */
+        width: 300px;
+    }
+
+    .contact-links {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .contact-item {
+        text-align: center;
+        margin: 0 24px; /* Adjust the margin here */
+    }
+
+
+    .contact-img {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 5px;
+    }
+
+    .contact-text {
+        font-size: 15px;
+    }
