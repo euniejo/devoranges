@@ -96,15 +96,13 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr); /* Create a 3x3 grid */
         grid-gap: 20px; /* Add gap between grid items */
-    }
-
-    .portfolio-item {
         text-align: center; /* Align the items in the center */
     }
 
-    .portfolio-item img {
-        width: 100%; /* Ensure images fill their container */
-        max-height: 200px; /* Limit the height of images */
+    .portfolio-grid img {
+        height: 150px;
+       
+        /* max-height: 200px;  */
         
     } 
 

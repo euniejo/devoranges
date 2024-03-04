@@ -1,9 +1,8 @@
 /*
-* PROG1935-23W-Sec5-Programming Dynamic Websites
-* Purpose  : Assignment4 (Server-side))
+* Purpose  : DevOranges Home Page
 * Revision History : version 1.0
-* Written by       : Eunheui Jo
-* Date             : Apr. 13. 2023 
+* Written by       : Eunie Jo
+* Date             : Feb. 27. 2024 
 */
 
 const express = require('express')
@@ -11,8 +10,8 @@ var path = require('path');
 
 var myApp = express()
 myApp.use(express.urlencoded({extended:false}));
-myApp.listen(8080);
-console.log('Express started on port 8080')
+myApp.listen(3000);
+console.log('Express started on port 3000')
 
 myApp.set('views', path.join(__dirname, 'views'));
 myApp.use(express.static(path.join(__dirname+'/public')));
@@ -233,3 +232,28 @@ function getOrderList(req)
 
     return orderList;
 }
+
+
+
+function startUnityGame(cmd) {
+    var exec = require("child_process").exec;
+    console.log(cmd);
+    // 외부 명령어 실행
+    var childProcess = exec(cmd, function(error, stdout, stderr) {
+        // 명령어 실행이 완료되면 이 콜백 함수가 호출됩니다.
+        // error: 에러 정보
+        // stdout: 명령어 실행 결과 (표준 출력)
+        // stderr: 에러 출력 (표준 에러)
+        console.log(cmd);
+        if (error) {
+            console.error("Error:", error);
+            return;
+        }
+
+        console.log("Output:", stdout);
+    });
+
+    // 프로세스 종료
+    //childProcess.kill();
+}
+
