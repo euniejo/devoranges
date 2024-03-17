@@ -94,7 +94,7 @@
 
     .portfolio-grid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr); /* Create a 3x3 grid */
+        grid-template-columns: repeat(4, 1fr); /* Create a 3x3 grid */
         grid-gap: 20px; /* Add gap between grid items */
         text-align: center; /* Align the items in the center */
     }
