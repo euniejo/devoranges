@@ -54,13 +54,13 @@
     .grid-item a {
         text-align: center;
         margin: 20px;
-        flex: 0 0 calc(33.33% - 40px);
-        max-width: calc(33.33% - 40px);
+        flex: 0 0 calc(25% - 40px);
+        max-width: calc(25% - 40px);
         text-decoration: none;
         color: black;
     }
     .grid-item img {
-        width: 200px;
+        width: 150px;
         height: auto;
         cursor: pointer;
     }
@@ -100,8 +100,7 @@
     }
 
     .portfolio-grid img {
-        height: 150px;
-       
+        height: 130px;
         /* max-height: 200px;  */
         
     } 
